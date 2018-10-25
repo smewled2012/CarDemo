@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Car forms</title>
+</head>
+<body>
+
+<h2> Adding Cars </h2>
+<form th:action="@{/save-car}" th:object="${car}" method="post">
+    Make <br />
+    <input th:type="text" th:field="*{make}" />  <br />
+    Model <br />
+    <input th:type="text" th:field="*{model}" /> <br />
+    Year <br />
+    <input type="text" th:field ="*{year}"> <br />
+    <br />
+
+    <input type="submit" value="Submit">
+
+
+</form>
+
+
+</body>
+</html>
